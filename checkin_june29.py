@@ -55,6 +55,20 @@ def checkin(students, student_name):
     students[student_name] = True
 
 
+def check_out(students, student_name):
+    ''' (dict, str) -> None
+
+    >>> students = {'jeff': True}
+    >>> check_out(students, 'jeff')
+    >>> students
+    {'jeff': False}
+    >>> check_out(students, 'jeff')
+    >>> students
+    {'jeff': False}
+    '''
+    students[student_name] = False
+
+
 def main():
     pass
 
