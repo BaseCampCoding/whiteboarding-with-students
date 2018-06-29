@@ -69,6 +69,18 @@ def check_out(students, student_name):
     students[student_name] = False
 
 
+def print_status(students):
+    checked_in = []
+    not_in = []
+    for student in students:
+        if students[student]:
+            checked_in.append(student)
+        else:
+            not_in.append(student)
+    print('Checked in:', ', '.join(checked_in))
+    print('Not checked in:', ', '.join(not_in))
+
+
 def main():
     pass
 
