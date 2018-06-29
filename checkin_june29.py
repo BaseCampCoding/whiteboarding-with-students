@@ -29,6 +29,15 @@ def string_names(student_dict):
     print(', '.join(student_dict))
 
 
+def input_valid_name(valid_names):
+    while True:
+        user_response = input('Name: ')
+        if user_response in valid_names:
+            return user_response
+        else:
+            print('Please provide a valid name')
+
+
 def main():
     pass
 
