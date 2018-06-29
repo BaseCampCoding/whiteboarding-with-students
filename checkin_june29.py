@@ -13,6 +13,14 @@ def list_to_dictionary(names):
     return dictionary
 
 
+def valid_names(students):
+    '''Dict -> Set
+    >>> valid_names({'lisa': False, 'oz': False, 'trey': False})
+    {'lisa', 'oz', 'trey'}
+    '''
+    return set(students.keys())
+
+
 def main():
     pass
 
