@@ -6,6 +6,13 @@ def name_file(file_name):
     return student_list
 
 
+def list_to_dictionary(names):
+    dictionary = {}
+    for name in names:
+        dictionary[name] = False
+    return dictionary
+
+
 def main():
     pass
 
