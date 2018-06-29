@@ -81,6 +81,25 @@ def print_status(students):
     print('Not checked in:', ', '.join(not_in))
 
 
+def checkin_or_checkout(students, student_name):
+    ''' (dict, str) -> None
+
+    >>> checkin_or_checkout({'Jo': True, 'lisa': False}, 'lisa')
+    Would you like to checkin or checkout? checkin
+    CHECKIN
+    '''
+    while True:
+        response = input('Would you like to checkin or checkout? ')
+        if response == 'checkin':
+            checkin(students, student_name)
+            break
+        elif response == 'checkout':
+            check_out(students, student_name)
+            break
+        else:
+            print('Invalid response')
+
+
 def main():
     pass
 
