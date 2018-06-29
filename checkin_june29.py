@@ -38,6 +38,23 @@ def input_valid_name(valid_names):
             print('Please provide a valid name')
 
 
+def checkin(students, student_name):
+    ''' (dict, str) -> None
+
+    Check in a student by changing their value
+    to True.
+
+    >>> students = {'lisa': False, 'Jo': False}
+    >>> checkin(students, 'lisa')
+    >>> students
+    {'lisa': True, 'Jo': False}
+    '''
+    # for name in students:
+    #     if name == student_name:
+    #         students[student_name]= True
+    students[student_name] = True
+
+
 def main():
     pass
 
