@@ -34,6 +34,8 @@ def input_valid_name(valid_names):
         user_response = input('Name: ')
         if user_response in valid_names:
             return user_response
+        elif user_response == 'quit':
+            break
         else:
             print('Please provide a valid name')
 
@@ -101,7 +103,15 @@ def checkin_or_checkout(students, student_name):
 
 
 def main():
-    pass
+    list_of_students = name_file('names.txt')
+    student_checkins = list_to_dictionary(list_of_students)
+    student_names = valid_names(student_checkins)
+    while True:
+        name = input_valid_name(student_names)
+        if name is None:
+            break
+        checkin_or_checkout(student_checkins, name)
+        print_status(student_checkins)
 
 
 if __name__ == '__main__':
