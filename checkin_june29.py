@@ -21,6 +21,14 @@ def valid_names(students):
     return set(students.keys())
 
 
+def string_names(student_dict):
+    '''
+    >>> string_names({'a': ..., 'b': ..., 'c': ...})
+    a, b, c
+    '''
+    print(', '.join(student_dict))
+
+
 def main():
     pass
 
